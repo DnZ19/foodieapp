@@ -1,0 +1,39 @@
+.searchBar  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #33312F;
+    border: none;
+    color: white;
+
+}
+
+::placeholder   {
+    background-color: #33312F;
+    color: white;
+}
+
+.searchBar input    {
+    width: 100%;
+    padding: 2px;
+    color: white;
+    border: none;
+    background-color: #33312F;
+}
+
+.searchBar button   {
+    padding: 5px;
+    background-color: #ff8427;
+    border: none;
+    cursor: pointer;
+
+}
+
+button   {
+    padding: 5px;
+    background-color: #ff8427;
+    border: none;
+    cursor: pointer;
+
+}
