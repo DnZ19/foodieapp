@@ -1,26 +1,27 @@
-import React, {useState, useEffect} from 'react';
-import styles from "./Daily.module.css";
-import RecipeCardDaily from "./RecipeCardDaily";
-import RecipeDescription from "./RecipeDescription";
-import RecipeData from "./RecipeData";
-import {Link} from "react-router-dom";
+import React from 'react';
+import {useEffect, useState} from "react";
 import axios from "axios";
+import styles from "../daily/Daily.module.css";
+import {Link} from "react-router-dom";
+import RecipeCardDaily from "../daily/RecipeCardDaily";
+import RecipeDescription from "../daily/RecipeDescription";
+import RecipeData from "../daily/RecipeData";
 
 function refreshRecipe() {
     window.location.reload(false);
 }
 
-function Daily() {
-    const [dailyRecipe, setDailyRecipe] = useState({});
+function Vegan() {
+    const [veganRecipe, setVeganRecipe] = useState({});
 
     useEffect(() => {
         async function fetchData() {
 
             try {
-                const result = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=1`);
+                const result = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=1&tags=vegetarian`);
 
                 console.log(result.data);
-                setDailyRecipe(result.data);
+                setVeganRecipe(result.data);
 
             } catch (e) {
                 console.error(e)
@@ -35,7 +36,7 @@ function Daily() {
 
         <>
             <header>
-                <h3>Daily Recommendation</h3>
+                <h3>Vegan recipes</h3>
 
                 <button
                     type="button"
@@ -46,10 +47,10 @@ function Daily() {
                 </button>
             </header>
 
-            {Object.keys(dailyRecipe).length > 0 &&
+            {Object.keys(veganRecipe).length > 0 &&
 
                 <section>
-                    {dailyRecipe.recipes.map((recipe) => {
+                    {veganRecipe.recipes.map((recipe) => {
                         return (
 
                             <article
@@ -115,4 +116,4 @@ function Daily() {
     )
 }
 
-export default Daily
+export default Vegan;

@@ -2,7 +2,10 @@ import Home from "./Home";
 import {Route, Routes} from "react-router-dom"
 import SearchPage from "./SearchPage";
 import Recommendation from "./Recommendation";
+import VeganPage from "./VeganPage";
 import Recipe from "./Recipe";
+import DrinkPage from "./DrinkPage";
+import ExtendedSearchPage from "./ExtendedSearchPage";
 
 function Pages  ()  {
     return (
@@ -14,7 +17,9 @@ function Pages  ()  {
                 <Route path="/daily" element={<Recommendation />}/>
 
 
-                {/*<Route path="/randomizer" element={<Randomizer />}/>*/}
+                <Route path="/vegan" element={<VeganPage />}/>
+                <Route path="/drinks" element={<DrinkPage />}/>
+                <Route path="/extendedSearch" element={<ExtendedSearchPage />}/>
                 {/*<Route path="/register" element={<Register />}/>*/}
                 {/*<Route path="/login" element={<Login />}/>*/}
 

@@ -1,39 +1,65 @@
-.searchBar  {
+.searchBar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: #33312F;
-    border: none;
+    justify-content: space-between;
     color: white;
-
+    margin: 0 2px;
+    border: none;
 }
 
 ::placeholder   {
-    background-color: #33312F;
+    background-color: transparent;
     color: white;
 }
 
 .searchBar input    {
-    width: 100%;
-    padding: 2px;
+    margin-top: -20px;
+    width: 325px;
+    padding: 10px;
     color: white;
-    border: none;
-    background-color: #33312F;
+    border: 1px solid black;
+    background-color: rgba(51, 49, 47, 0.15);
+
 }
 
-.searchBar button   {
-    padding: 5px;
-    background-color: #ff8427;
-    border: none;
+.searchBar button:hover   {
+    padding: 9px;
+    background-color: rgba(51, 49, 47, 0.15);
     cursor: pointer;
-
+    border: 1px solid orangered;
+    color: black;
 }
 
-button   {
-    padding: 5px;
-    background-color: #ff8427;
-    border: none;
+.search-button   {
+    margin-top: -20px;
+    padding: 10px;
+    background-color: orangered;
+    border: 1px solid orangered;
     cursor: pointer;
+    margin-left: 10px;
 
 }
+
+/*.radio-buttons  {*/
+/*    font-size: 15px;*/
+/*    border: 1px solid black;*/
+/*    margin-top: 10px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 300px;*/
+
+/*}*/
+
+/*input[type=radio]   {*/
+/*    margin-top: 0;*/
+/*    border: none;*/
+/*    width: 100%;*/
+/*    height: 1em;*/
+/*}*/
+
+/*label   {*/
+/*    font-size: 15px;*/
+/*}*/

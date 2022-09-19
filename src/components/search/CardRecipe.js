@@ -25,19 +25,8 @@ function CardRecipe({
                         To the recipe
 
                     </button>
-
                 </div>
-
             </div>
-            {/*<div>*/}
-            {/*    <h3>Description</h3>*/}
-            {/*    <ol>*/}
-            {/*        {dishTypes.map(dishType => (*/}
-            {/*            <li>{dishType}</li>*/}
-            {/*        ))}*/}
-            {/*    </ol>*/}
-
-            {/*</div>*/}
         </>
 
     );

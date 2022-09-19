@@ -1,0 +1,45 @@
+.ext-recipe-img    {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.ext-recipe-tile-title  {
+    max-width: 80px;
+    text-align: center;
+    margin: 12px 0;
+}
+
+/*.ext-recipe-tile-button {*/
+/*    max-width: 100px;*/
+/*    padding: 6px;*/
+/*    background-color: transparent;*/
+/*    border: 2px solid orangered;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.ext-recipe-tile-button:hover {*/
+/*    max-width: 100px;*/
+/*    padding: 6px;*/
+/*    background-color: orangered;*/
+/*    border: 2px solid orangered;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.card-link    {
+    text-decoration: none;
+}
+
+.ext-recipe-tile    {
+    margin-top: 24px;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    gap: 9px;
+    /*border: 1px solid black;*/
+    font-size: 10px;
+    box-shadow: 0 1px 10px grey;
+    border-radius: 2px;
+}
+

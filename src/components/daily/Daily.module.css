@@ -1,17 +1,25 @@
-.main-recipe-container {
+.recipe-container   {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+    align-items: center;
 
 }
 
-.recipe-container   {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    /*border: 1px solid black*/
+.recommend-refresh-button   {
+    padding: 5px;
+    border: 2px solid white;
+    background: orangered;
+    border-radius: 2px;
+    color: white;
+
+}
+
+.recommend-refresh-button:hover   {
+    padding: 5px;
+    border: 2px solid orangered;
+    background: none;
+    border-radius: 2px;
+    color: black;
 
 }
 
@@ -21,16 +29,25 @@
     border-radius: 2px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 5px;
+    align-items: center;
     width: 400px;
-    height: 350px;
+    height: 300px;
     border: 1px solid black;
 }
 
-.card .card__image   {
+.card-link  {
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+}
+
+.card__image   {
     height: 12rem;
-    width: 80%;
+    width: 100%;
     object-fit: cover;
 
 }
@@ -41,23 +58,28 @@
     justify-content: center;
     align-items: center;
     height: 10rem;
-    width: 80%;
+    width: 100%;
     /*border: 1px solid black*/
 }
 
 .card__title   {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px;
     margin-bottom: 60px;
     /*border: 1px solid black;*/
     background-color: rgba(51, 49, 47, 0.1);
     width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+
 }
 
 .cardButtons  {
     position: absolute;
-    margin: 80px 5px 0px 5px;
-    /*margin-top: 20px;*/
+    margin: 85px 5px 40px 5px;
     padding: 5px;
     border: 2px solid orangered;
     background: none;
@@ -65,41 +87,54 @@
 
 }
 
-.card-link  {
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-
+.cardButtons:hover  {
+    position: absolute;
+    margin: 85px 5px 40px 5px;
+    padding: 5px;
+    border: 2px solid orangered;
+    background: orangered;
+    color: white;
+    width: 7rem;
 
 }
+
+.recipe-info-tile  {
+    font-size: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid black;*/
+    margin-top: 10px;
+    width: 98%;
+    height: 250px;
+    box-shadow: 0 1px 10px grey;
+
+}
+
+
 
 .recommendation-description {
     overflow: hidden;
-    box-shadow: 0 2px 20px grey;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    align-items: baseline;
+
     border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 20px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*border: 1px solid black;*/
+
+}
+
+ul{
     margin: 5px;
-    width: 400px;
-    height: 200px;
-    border: 1px solid black;
+    padding-left: 9px;
 
 }
 
-.card__description  {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 150px;
-    margin-left: -60px;
-}
-
-.card__description ol{
-    list-style: none;
-    margin-top: -20px;
-
+.recipe-data    {
+    margin: 5px;
 }
 
 

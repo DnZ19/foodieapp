@@ -1,23 +1,23 @@
 import React, {useEffect, useState} from "react";
-import styles from "./Search.module.css";
+import styles from "../search/Search.module.css"
 import axios from "axios";
-import SearchBar from "./SearchBar";
-import CardRecipe from "./CardRecipe";
+import SearchBar from "../search/SearchBar";
+import CardRecipe from "../search/CardRecipe";
 import {Link} from "react-router-dom";
 
 
-function Search() {
+function Drinks() {
 
-    const [searchData, setSearchData] = useState({});
     const [query, setQuery] = useState("");
+    const [drinks, setDrinks] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
 
             try {
-                const result = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${query}&number=3`);
+                const result = await axios.get(`https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_FOODIE_API_ID}&app_key=${process.env.REACT_APP_FOODIE_API_KEY}&health=alcohol-cocktail&from=0&to=3`);
                 console.log(result.data);
-                setSearchData(result.data);
+                setDrinks(result.data.hits);
 
             } catch (e) {
                 console.error(e);
@@ -35,10 +35,10 @@ function Search() {
 
             <SearchBar
                 setQueryHandler={setQuery}
-                placeholder={"Enter a desired ingredient..."}
+                placeholder={"What drink are you looking for?"}
             />
 
-            {Object.keys(searchData).length > 0 &&
+
                 <span className={styles["recipe-cards-container"]}
 
                 >
@@ -46,20 +46,19 @@ function Search() {
                         className={styles["recipe-container"]}
                     >
 
-                        {searchData.results.map((recipe) => {
+                        {drinks.map((drink) => {
                             return (
                                 <Link
-                                    to={"/recipe/" + recipe.id}
+                                    to={"/recipe/" + drink["recipe"]["id"]}
                                     className={styles["card-link"]}
-                                    key={recipe.id}
+                                    key={drink["recipe"]["id"]}
                                 >
                                     <CardRecipe
-                                        key={recipe.id}
-                                        id={recipe.id}
-                                        image={recipe.image}
-                                        alt={recipe.title}
-                                        title={recipe.title}
-                                        // description={recipe.summary}
+                                        key={drink["recipe"]["id"]}
+                                        id={drink["recipe"]["id"]}
+                                        image={drink["recipe"].image}
+                                        alt={drink["recipe"].label}
+                                        title={drink["recipe"].label}
                                         styleCard="card"
                                         styleCardImage="card__image"
                                         styleCardTitle="card__title"
@@ -71,9 +70,9 @@ function Search() {
                         })}
                     </article>
                 </span>
-            }
+
         </>
     )
 }
 
-export default Search
+export default Drinks
