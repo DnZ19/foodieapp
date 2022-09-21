@@ -9,6 +9,7 @@ function SearchBar({ setQueryHandler, placeholder }) {
         console.log('submitted!');
         setQueryHandler(query);
         setQuery("");
+
     }
 
 
@@ -33,6 +34,8 @@ function SearchBar({ setQueryHandler, placeholder }) {
                 >
                     Search
                 </button>
+
+
 
 
         </form>

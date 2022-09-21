@@ -1,4 +1,4 @@
-import Home from "./Home";
+import HomePage from "./HomePage";
 import {Route, Routes} from "react-router-dom"
 import SearchPage from "./SearchPage";
 import Recommendation from "./Recommendation";
@@ -11,7 +11,7 @@ function Pages  ()  {
     return (
 
             <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<HomePage />}/>
                 <Route path="/search" element={<SearchPage />}/>
                 <Route path="/recipe/:id" element={<Recipe />}/>
                 <Route path="/daily" element={<Recommendation />}/>

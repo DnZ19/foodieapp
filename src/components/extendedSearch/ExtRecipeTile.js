@@ -1,24 +1,16 @@
 import React from "react";
 import styles from "./ExtendedSearch.module.css";
 
-function ExtRecipeTile({ search })    {
+function ExtRecipeTile({ recipe })    {
     return  (
-        <div>
+        <div className={styles["ext-recipe-tile"]}>
             <img
                 className={styles["ext-recipe-img"]}
-                src={search["recipe"].image}
-                alt={search["recipe"].label}
+                src={recipe["recipe"].image}
+                alt={recipe["recipe"].label}
             />
 
-            <p className={styles["ext-recipe-tile-title"]}>{search["recipe"].label}</p>
-
-            {/*<button*/}
-            {/*    type="button"*/}
-            {/*    className={styles["ext-recipe-tile-button"]}*/}
-            {/*>*/}
-            {/*    To the recipe*/}
-
-            {/*</button>*/}
+            <p className={styles["ext-recipe-tile-title"]}>{recipe["recipe"].label}</p>
 
         </div>
     );

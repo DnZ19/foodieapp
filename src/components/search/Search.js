@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 function Search() {
 
     const [searchData, setSearchData] = useState({});
-    const [query, setQuery] = useState("");
+    const [query, setQuery] = useState("steak");
 
     useEffect(() => {
         async function fetchData() {
